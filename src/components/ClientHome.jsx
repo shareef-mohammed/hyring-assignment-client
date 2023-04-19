@@ -38,7 +38,7 @@ const ClientHome = () => {
             navigate('/client/login')
         }
       })
-  },[])
+  },[open])
   const logout = () => {
     localStorage.removeItem('clientToken')
     navigate('/client/login')
