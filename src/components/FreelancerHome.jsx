@@ -31,7 +31,7 @@ const FreelancerHome = () => {
                     progress: undefined,
                     theme: "colored",
                 });
-                navigate('/client/login')
+                navigate('/freelancer/login')
             } else {
                 console.log(err)
             }
