@@ -6,21 +6,7 @@ import { toast } from 'react-toastify';
 
 const FreelancerSignup = () => {
     const navigate = useNavigate()
-    useState(() => {
-      const token = localStorage.getItem('freelancerToken');
-      axios.get(`${import.meta.env.VITE_BASE_URL}/freelancer/authenticate`,{
-        headers: {
-          'Authorization': token,
-          'Content-Type': 'application/json'
-        }
-      })
-      .then((res) => {
-        navigate('/freelancer/home')
-      })
-      .catch((err) => {
-        navigate('/freelancer/signup')
-      })
-    },[])
+    
     const inputStyles =
       "w-[80%] mx-auto my-4 text-sm pl-2 border py-2 rounded-lg";
     const errMsg = "text-red-700";

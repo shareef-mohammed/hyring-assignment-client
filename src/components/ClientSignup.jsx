@@ -6,21 +6,7 @@ import { toast } from "react-toastify";
 
 const ClientSignup = () => {
   const navigate = useNavigate()
-  useState(() => {
-    const token = localStorage.getItem('clientToken');
-    axios.get(`${import.meta.env.VITE_BASE_URL}/client/authenticate`,{
-      headers: {
-        'Authorization': token,
-        'Content-Type': 'application/json'
-      }
-    })
-    .then((res) => {
-      navigate('/client/home')
-    })
-    .catch((err) => {
-      navigate('/client/signup')
-    })
-  },[])
+  
   const inputStyles =
     "w-[80%] mx-auto my-4 text-sm pl-2 border py-2 rounded-lg";
   const errMsg = "text-red-700";
