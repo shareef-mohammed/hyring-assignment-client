@@ -37,6 +37,7 @@ const FreelancerSignup = () => {
                     progress: undefined,
                     theme: "colored",
                 });
+                navigate('/freelancer/home');
             })
             .catch((err) => {               
                     if(err.response.status === 409) {
